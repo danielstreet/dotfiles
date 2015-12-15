@@ -5,6 +5,11 @@
 #
 # See http://zsh.sourceforge.net/Intro/intro_3.html
 
+# Reload zsh startup files by re-executing the shell.
+reload!() {
+  exec zsh "$@"
+}
+
 # zsh configs are spread out across partials under zsh/zshrc.d/
 for rcfile in "$DOTFILES/zsh/zshrc.d/"*.zsh(.N); do
   source "$rcfile"
