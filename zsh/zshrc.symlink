@@ -1,0 +1,15 @@
+# ~/.zshrc is sourced for interactive and login shells. It should contain
+# commands that customize the behavior of zsh. Environment variables and tweaks
+# that should effect *all* invocations of the shell should instead be
+# placed in ~/.zshenv.
+#
+# See http://zsh.sourceforge.net/Intro/intro_3.html
+
+# zsh configs are spread out across partials under zsh/zshrc.d/
+for rcfile in "$DOTFILES/zsh/zshrc.d/"*.zsh(.N); do
+  . "$rcfile"
+done
+
+# Use .zshrc.local for host-specific tweaks that you don't want in your public,
+# versioned repository.
+[[ -r "$ZDOTDIR/.zshrc.local" ]] && source "$ZDOTDIR/.zshrc.local"

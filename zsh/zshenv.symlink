@@ -1,0 +1,32 @@
+# ~/.zshenv is the first startup file that zsh will read commands from. It is
+# sourced on all invocations of the shell. As such, it should not contain
+# commands that produce output or assume the shell is attached to a TTY.
+#
+# See http://zsh.sourceforge.net/Intro/intro_3.html
+
+# ZDOTDIR defaults to $HOME when unset. See script/zsh for an example overriding
+# this path to point to the local checkout.
+ZDOTDIR="${ZDOTDIR:-$HOME}"
+
+# Find the absolute path to the dotfiles directory. Ancient shell magic is used
+# to work around OSX not having a proper readlink utility.
+DOTFILES="${(%):-%N}"
+while [[ -h "$DOTFILES" ]]; do
+  DOTFILES="$(cd "$(dirname "$DOTFILES")" && readlink "$(basename "$DOTFILES")")"
+done
+DOTFILES="$(cd "$(dirname "$DOTFILES")/.." && pwd -P)"
+
+# Use vim as the default editor.
+export EDITOR="vim"
+
+# Use less as the default pager.
+export PAGER="less"
+
+# zsh configs are spread out across partials under zsh/zshenv.d/
+for envfile in "$DOTFILES/zsh/zshenv.d/"*.zsh(.N); do
+  . "$envfile"
+done
+
+# Use .zshenv.local for secrets and host-specific tweaks that you don't want in
+# your public, versioned repository.
+[[ -r "$ZDOTDIR/.zshenv.local" ]] && source "$ZDOTDIR/.zshenv.local"

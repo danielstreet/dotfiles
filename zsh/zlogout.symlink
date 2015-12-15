@@ -1,0 +1,12 @@
+# ~/.zlogout is sourced when login shells exit.
+#
+# See http://zsh.sourceforge.net/Intro/intro_3.html
+
+# zsh configs are spread out across partials under zsh/zlogout.d/
+for logoutfile in "$DOTFILES/zsh/zlogout.d/"*.zsh(.N); do
+  source "$logoutfile"
+done
+
+# Use .zlogout.local for host-specific tweaks that you don't want in your
+# public, versioned repository.
+[[ -r "$ZDOTDIR/.zlogout.local" ]] && source "$ZDOTDIR/.zlogout.local"
