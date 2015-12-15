@@ -24,7 +24,7 @@ export PAGER="less"
 
 # zsh configs are spread out across partials under zsh/zshenv.d/
 for envfile in "$DOTFILES/zsh/zshenv.d/"*.zsh(.N); do
-  . "$envfile"
+  source "$envfile"
 done
 
 # Use .zshenv.local for secrets and host-specific tweaks that you don't want in
