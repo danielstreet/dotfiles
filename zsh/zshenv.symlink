@@ -12,7 +12,7 @@ ZDOTDIR="${ZDOTDIR:-$HOME}"
 # to work around OSX not having a proper readlink utility.
 DOTFILES="${(%):-%N}"
 while [[ -h "$DOTFILES" ]]; do
-  DOTFILES="$(cd "$(dirname "$DOTFILES")" && readlink "$(basename "$DOTFILES")")"
+  DOTFILES="$(cd "$(dirname "$DOTFILES")" && echo "$(pwd -P)/$(readlink "$(basename "$DOTFILES")")")"
 done
 DOTFILES="$(cd "$(dirname "$DOTFILES")/.." && pwd -P)"
 
