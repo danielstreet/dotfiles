@@ -29,4 +29,6 @@ done
 
 # Use .zshenv.local for secrets and host-specific tweaks that you don't want in
 # your public, versioned repository.
-[[ -r "$ZDOTDIR/.zshenv.local" ]] && source "$ZDOTDIR/.zshenv.local"
+if [[ -r "$ZDOTDIR/.zshenv.local" ]]; then
+  source "$ZDOTDIR/.zshenv.local"
+fi
