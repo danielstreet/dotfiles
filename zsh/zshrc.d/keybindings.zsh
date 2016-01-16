@@ -7,6 +7,9 @@ zmodload zsh/terminfo
 # Use vi mode
 zplug "plugins/vi-mode", from:oh-my-zsh
 
+# Shift-Tab navigates completions in reverse
+bindkey "$terminfo[cbt]" reverse-menu-complete
+
 # zsh-history-substring-search enables history searching and cycling on the
 # command line, similar to Fish shell's history search feature.
 zplug "zsh-users/zsh-history-substring-search"
