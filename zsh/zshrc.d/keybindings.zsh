@@ -11,14 +11,14 @@ zplug "plugins/vi-mode", from:oh-my-zsh
 bindkey "\e[1~" beginning-of-line
 bindkey "\e[4~" end-of-line
 
-# Shift-Tab navigates completions in reverse
+# Shift-Tab reverse navigates completions
 bindkey "$terminfo[cbt]" reverse-menu-complete
 
-# zsh-history-substring-search enables history searching and cycling on the
-# command line, similar to Fish shell's history search feature.
+# Enable history searching and cycling on the command line, similar to
+# Fish shell's history search feature.
 zplug "zsh-users/zsh-history-substring-search"
 
-# Bind UP and DOWN arrow keys
+# Bind Up and Down arrow keys
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
