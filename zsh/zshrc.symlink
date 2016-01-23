@@ -20,3 +20,7 @@ done
 if [[ -r "$ZDOTDIR/.zshrc.local" ]]; then
   source "$ZDOTDIR/.zshrc.local"
 fi
+
+# Finally, initialize zsh's completion system.
+autoload -U compinit
+compinit
