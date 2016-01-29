@@ -8,8 +8,12 @@ zmodload zsh/terminfo
 zplug "plugins/vi-mode", from:oh-my-zsh
 
 # Home and End keys jump between beginning and end of command line
-bindkey "\e[1~" beginning-of-line
-bindkey "\e[4~" end-of-line
+bindkey '^A' vi-beginning-of-line
+bindkey '^E' vi-end-of-line
+
+# Option-Left and Option-Right jumps between words
+bindkey '^[b' vi-backward-word
+bindkey '^[f' vi-forward-word
 
 # Shift-Tab reverse navigates completions
 bindkey "$terminfo[cbt]" reverse-menu-complete
