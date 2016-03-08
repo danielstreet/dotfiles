@@ -11,6 +11,10 @@ zplug "plugins/vi-mode", from:oh-my-zsh
 bindkey '^A' vi-beginning-of-line
 bindkey '^E' vi-end-of-line
 
+# tmux sends different key codes for Home and End
+bindkey "\e[1~" vi-beginning-of-line
+bindkey "\e[4~" vi-end-of-line
+
 # Option-Left and Option-Right jumps between words
 bindkey '^[b' vi-backward-word
 bindkey '^[f' vi-forward-word
