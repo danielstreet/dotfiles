@@ -19,9 +19,6 @@ DOTFILES="$(cd "$(dirname "$DOTFILES")/.." && pwd -P)"
 # Use vim as the default editor.
 export EDITOR="vim"
 
-# Use less as the default pager.
-export PAGER="less"
-
 # zsh configs are spread out across partials under zsh/zshenv.d/
 for envfile in "$DOTFILES/zsh/zshenv.d/"*.zsh(.N); do
   source "$envfile"
