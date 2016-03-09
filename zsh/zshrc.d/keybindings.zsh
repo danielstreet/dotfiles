@@ -4,9 +4,6 @@
 # See man:terminfo(5) for more information.
 zmodload zsh/terminfo
 
-# Use vi mode
-zplug "plugins/vi-mode", from:oh-my-zsh
-
 # Home and End keys jump between beginning and end of command line
 bindkey '^A' vi-beginning-of-line
 bindkey '^E' vi-end-of-line
