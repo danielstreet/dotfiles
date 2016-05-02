@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# Reattach or start a new remote tmux session over mosh.
+#
+set -o errexit
+
+host="$1"
+shift
+
+if [ -z "$host" ]; then
+  echo "usage: $0 <host>" >&2
+  exit 1
+fi
+
+exec mosh "$host" -- /bin/sh -c "tmux attach $@ || tmux $@"
