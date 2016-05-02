@@ -8,19 +8,11 @@
 # this path to point to the local checkout.
 ZDOTDIR="${ZDOTDIR:-$HOME}"
 
-# Find the absolute path to the dotfiles directory. Ancient shell magic is used
-# to work around OSX not having a proper readlink utility.
-DOTFILES="${(%):-%N}"
-while [[ -h "$DOTFILES" ]]; do
-  DOTFILES="$(cd "$(dirname "$DOTFILES")" && echo "$(pwd -P)/$(readlink "$(basename "$DOTFILES")")")"
-done
-DOTFILES="$(cd "$(dirname "$DOTFILES")/.." && pwd -P)"
-
 # Use nvim as the default editor.
 export EDITOR="nvim"
 
 # zsh configs are spread out across partials under zsh/zshenv.d/
-for envfile in "$DOTFILES/zsh/zshenv.d/"*.zsh(.N); do
+for envfile in "$ZDOTDIR/.zsh/zshenv.d/"*.zsh; do
   source "$envfile"
 done
 

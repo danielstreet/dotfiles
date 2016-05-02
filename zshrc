@@ -11,7 +11,7 @@ reload!() {
 }
 
 # zsh configs are spread out across partials under zsh/zshrc.d/
-for rcfile in "$DOTFILES/zsh/zshrc.d/"*.zsh(.N); do
+for rcfile in "$ZDOTDIR/.zsh/zshrc.d/"*.zsh; do
   source "$rcfile"
 done
 

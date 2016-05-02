@@ -3,7 +3,7 @@
 # See http://zsh.sourceforge.net/Intro/intro_3.html
 
 # zsh configs are spread out across partials under zsh/zlogout.d/
-for logoutfile in "$DOTFILES/zsh/zlogout.d/"*.zsh(.N); do
+for logoutfile in "$ZDOTDIR/.zsh/zlogout.d/"*.zsh; do
   source "$logoutfile"
 done
 

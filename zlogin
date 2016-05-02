@@ -4,7 +4,7 @@
 # See http://zsh.sourceforge.net/Intro/intro_3.html
 
 # zsh configs are spread out across partials under zsh/zlogin.d/
-for loginfile in "$DOTFILES/zsh/zlogin.d/"*.zsh(.N); do
+for loginfile in "$ZDOTDIR/.zsh/zlogin.d/"*.zsh; do
   source "$loginfile"
 done
 
