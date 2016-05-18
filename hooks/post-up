@@ -1,0 +1,23 @@
+#!/bin/sh
+
+[ "$DEBUG" ] && set -o xtrace
+set -o errexit
+
+NVIM_HOME="${XDG_CONFIG_HOME:-"$HOME/.config"}/nvim"
+
+symlink() {
+  local source="$1"
+  local target="$2"
+  if [ ! -e "$target" ]; then
+    ln -s "$source" "$target"
+  fi
+}
+
+symlink .config/nvim "$HOME/.vim"
+
+if [ ! -e "$NVIM_HOME/autoload/plug.vim" ]; then
+  curl -fLo "$NVIM_HOME/autoload/plug.vim" --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+vim -u "$NVIM_HOME/bundle.vim" +PlugInstall +PlugClean! +qa

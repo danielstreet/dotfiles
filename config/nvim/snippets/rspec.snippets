@@ -1,0 +1,62 @@
+snippet spechelper
+	require 'spec_helper'
+
+
+snippet railshelper
+	require 'rails_helper'
+
+
+snippet desc
+	describe ${1:Class} do
+		${0}
+	end
+snippet des
+	describe '${1:something}' do
+		${0}
+	end
+snippet con
+	context '${1:something}' do
+		${0}
+	end
+snippet let
+	let(:${1:target}) do
+		${2}
+	end
+snippet subj
+	subject(:${1:target}) do
+		${2}
+	end
+snippet b
+	before(:${1:each}) do
+		${2}
+	end
+snippet a
+	after(:${1:each}) do
+		${2}
+	end
+snippet it-
+	it { is_expected.to ${1} }
+snippet it
+	it '${1:does something}' do
+		${0}
+	end
+snippet ex
+	expect(${1:subject}).to ${2}
+snippet nex
+	expect(${1:subject}).not_to ${2}
+snippet feat
+	feature '${1:Growing money on trees}' do
+		${0}
+	end
+snippet back
+	background do
+		${1}
+	end
+snippet scen
+	scenario '${1:I forget to water my tree}' do
+		${0}
+	end
+snippet given
+	given(:${1:target}) do
+		${2}
+	end
