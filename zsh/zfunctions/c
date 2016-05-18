@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+#
+# This lets you quickly jump into a project directory.
+#
+# Type:
+#
+#   c <tab>
+#
+# ...to autocomplete on all of your projects in the directories specified in
+# `functions/_c`. Typically I'm using it like:
+#
+#    c holm<tab>/bo<tab>
+#
+# ...to quickly jump into holman/boom, for example.
+#
+# This also accounts for how Go structures its projects. For example, it will
+# autocomplete both on $PROJECTS, and also assume you want to autocomplete on
+# your Go projects in $GOPATH/src.
+#
+# Based on https://github.com/holman/dotfiles/blob/master/functions/c
+
+local dir
+local project_paths=("${(s/:/)PROJECTS}")
+
+for dir in $project_paths; do
+  [[ -z "$1" ]] && cd "$dir" && break
+  [[ -s "$dir/$1" ]] && cd "$dir/$1" && break
+done
