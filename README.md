@@ -9,3 +9,5 @@ Clone the repository:
 Install the dotfiles with [rcm][rcm]:
 
     $ RCRC=$HOME/.dotfiles/rcrc rcup
+
+[rcm]: https://github.com/thoughtbot/rcm#readme
