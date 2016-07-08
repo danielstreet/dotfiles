@@ -1,0 +1,42 @@
+# vi: set ft=gitconfig :
+
+[user]
+	useconfigonly = true
+
+[alias]
+  co     = checkout
+  commit = commit --verbose
+  count  = !git shortlog -sn
+  lg     = log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[color]
+  branch = auto
+  diff   = auto
+  status = auto
+  ui     = true
+
+[color "status"]
+  added     = yellow
+  changed   = green
+  untracked = cyan
+
+[core]
+  editor = nvim
+
+[apply]
+  whitespace = nowarn
+
+[mergetool]
+  keepBackup = false
+
+[difftool]
+  prompt = false
+
+[help]
+  autocorrect = 1
+
+[push]
+  default = simple
+
+[web]
+  browser = open
