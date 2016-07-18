@@ -18,6 +18,7 @@ Plug 'altercation/vim-colors-solarized'
 
 " General
 Plug 'Raimondi/delimitMate'
+Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
 Plug 'jamessan/vim-gnupg'
 Plug 'jgdavey/tslime.vim'
