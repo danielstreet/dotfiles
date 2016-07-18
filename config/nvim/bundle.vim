@@ -73,7 +73,7 @@ Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 
 " Miscellaneous
+Plug 'plasticboy/vim-markdown'
 Plug 'rust-lang/rust.vim'
-Plug 'tpope/vim-markdown'
 
 call plug#end()
