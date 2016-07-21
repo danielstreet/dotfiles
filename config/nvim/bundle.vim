@@ -31,6 +31,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
