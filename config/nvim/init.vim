@@ -35,6 +35,8 @@ colo solarized
 set t_Co=256
 set bg=dark
 
+let g:airline_powerline_fonts = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tabs, and indentation
 """""""""""""""""""""""""""""""""""""""""""""""""
