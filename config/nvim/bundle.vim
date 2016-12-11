@@ -45,6 +45,9 @@ Plug 'hashivim/vim-terraform'
 Plug 'honza/dockerfile.vim'
 Plug 'yaml.vim'
 
+" C
+Plug 'vim-scripts/c.vim'
+
 " CSS
 Plug 'groenewege/vim-less'
 Plug 'hail2u/vim-css3-syntax'
