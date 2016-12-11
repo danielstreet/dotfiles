@@ -47,6 +47,7 @@ Plug 'yaml.vim'
 
 " C
 Plug 'brookhong/cscope.vim'
+Plug 'rhysd/vim-clang-format'
 Plug 'vim-scripts/c.vim'
 
 " CSS
