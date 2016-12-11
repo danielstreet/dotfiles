@@ -43,7 +43,6 @@ Plug 'tomtom/tlib_vim'
 Plug 'Matt-Deacalion/vim-systemd-syntax'
 Plug 'hashivim/vim-terraform'
 Plug 'honza/dockerfile.vim'
-Plug 'rodjek/vim-puppet'
 Plug 'yaml.vim'
 
 " CSS
