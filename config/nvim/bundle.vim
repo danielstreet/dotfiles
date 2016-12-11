@@ -46,6 +46,7 @@ Plug 'honza/dockerfile.vim'
 Plug 'yaml.vim'
 
 " C
+Plug 'brookhong/cscope.vim'
 Plug 'vim-scripts/c.vim'
 
 " CSS
