@@ -77,6 +77,7 @@ Plug 'vim-ruby/vim-ruby'
 
 " Miscellaneous
 Plug 'plasticboy/vim-markdown'
+Plug 'rhysd/vim-crystal'
 Plug 'rust-lang/rust.vim'
 
 call plug#end()
