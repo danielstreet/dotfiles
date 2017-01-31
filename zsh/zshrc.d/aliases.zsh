@@ -8,6 +8,9 @@ darwin*|*bsd)
 linux*)
   alias ls='ls --color=auto -p'
   ;;
+*)
+  echo "aliases: unknown OSTYPE '$OSTYPE'" >&2
+  ;;
 esac
 
 alias grep='grep -Hn --color=auto'
