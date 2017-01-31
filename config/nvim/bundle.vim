@@ -80,6 +80,7 @@ Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 
 " Miscellaneous
+Plug 'LnL7/vim-nix'
 Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/vim-crystal'
 Plug 'rust-lang/rust.vim'
