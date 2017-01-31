@@ -19,6 +19,7 @@ function alias_preference {
 
 # Create aliases to enhanced alternatives
 alias_preference git hub
+alias_preference make colormake
 alias_preference top htop
 alias_preference vi nvim vim
 alias_preference vim nvim
