@@ -1,3 +1,16 @@
+autoload -U colors && colors
+
+case "$OSTYPE" in
+darwin*|*bsd)
+  # Solarized dircolors for BSD ls
+  #
+  export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+  ;;
+*)
+  echo "prompt: unknown OSTYPE '$OSTYPE'" >&2
+  ;;
+esac
+
 # Enable command line syntax highlighting
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
 
