@@ -1,8 +1,8 @@
 # Ask to bundle zsh plugins.
-if ! zplug check; then
-  if read -q "?Install zplug bundle? [y/N] "; then
-    echo
-    zplug install
+if ! zplug check --verbose; then
+  printf "Install zplug bundle? [y/N]: "
+  if read -q; then
+    echo; zplug install
   fi
 fi
 

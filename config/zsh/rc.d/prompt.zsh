@@ -12,7 +12,7 @@ darwin*|*bsd)
 esac
 
 # Enable command line syntax highlighting
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Use pure prompt theme
 zplug "sindresorhus/pure"
