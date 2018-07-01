@@ -3,7 +3,7 @@ autoload -U colors && colors
 case "$OSTYPE" in
 darwin*|*bsd)
   # Solarized dircolors for BSD ls
-  #
+  # Source: https://github.com/seebi/dircolors-solarized/issues/10#issue-1093648
   export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
   ;;
 *)
