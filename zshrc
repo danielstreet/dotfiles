@@ -10,15 +10,14 @@ reload!() {
   exec zsh "$@"
 }
 
-# zsh configs are spread out across partials under zsh/zshrc.d/
-for rcfile in "$ZDOTDIR/.zsh/zshrc.d/"*.zsh; do
+for rcfile in "$XDG_CONFIG_HOME/zsh/rc.d/"*.zsh; do
   source "$rcfile"
 done
 
 # Use .zshrc.local for host-specific tweaks that you don't want in your public,
 # versioned repository.
-if [[ -r "$ZDOTDIR/.zshrc.local" ]]; then
-  source "$ZDOTDIR/.zshrc.local"
+if [ -r "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
 fi
 
 # Finally, initialize zsh's completion system.

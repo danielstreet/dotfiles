@@ -4,20 +4,19 @@
 #
 # See http://zsh.sourceforge.net/Intro/intro_3.html
 
-# ZDOTDIR defaults to $HOME when unset. See script/zsh for an example overriding
-# this path to point to the local checkout.
-ZDOTDIR="${ZDOTDIR:-$HOME}"
+# XDG_CONFIG_HOME specifies the directory where config files are read from.
+# See https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
 # Use nvim as the default editor.
 export EDITOR="nvim"
 
-# zsh configs are spread out across partials under zsh/zshenv.d/
-for envfile in "$ZDOTDIR/.zsh/zshenv.d/"*.zsh; do
+for envfile in "$XDG_CONFIG_HOME/zsh/env.d/"*.zsh; do
   source "$envfile"
 done
 
 # Use .zshenv.local for secrets and host-specific tweaks that you don't want in
 # your public, versioned repository.
-if [[ -r "$ZDOTDIR/.zshenv.local" ]]; then
-  source "$ZDOTDIR/.zshenv.local"
+if [ -r "$HOME/.zshenv.local" ]; then
+  source "$HOME/.zshenv.local"
 fi

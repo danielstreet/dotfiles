@@ -7,4 +7,4 @@ for dir in $project_paths; do
   _files -W $dir -/
 done
 
-# See further documentation in `zfunctions/c`.
+# See further documentation in `functions.d/c`.

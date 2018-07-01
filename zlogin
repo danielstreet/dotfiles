@@ -3,13 +3,14 @@
 #
 # See http://zsh.sourceforge.net/Intro/intro_3.html
 
-# zsh configs are spread out across partials under zsh/zlogin.d/
-for loginfile in "$ZDOTDIR/.zsh/zlogin.d/"*.zsh; do
-  source "$loginfile"
-done
+if [ -d "$XDG_CONFIG_HOME/zsh/login.d" ]; then
+  for loginfile in "$XDG_CONFIG_HOME/zsh/login.d/"*.zsh; do
+    source "$loginfile"
+  done
+fi
 
 # Use .zlogin.local for host-specific tweaks that you don't want in your public,
 # versioned repository.
-if [[ -r "$ZDOTDIR/.zlogin.local" ]]; then
-  source "$ZDOTDIR/.zlogin.local"
+if [ -r "$HOME/.zlogin.local" ]; then
+  source "$HOME/.zlogin.local"
 fi
