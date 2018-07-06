@@ -33,7 +33,11 @@ set cursorline
 let g:solarized_termtrans=1 " Enable color scheme transparency
 colo solarized
 set t_Co=256
-set bg=dark
+if $BG == 'light'
+  set bg=light
+else
+  set bg=dark
+endif
 
 let g:airline_powerline_fonts = 1
 
